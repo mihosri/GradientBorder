@@ -1,9 +1,31 @@
+/**
+ * Gradient Angle Property
+ * -----------------------
+ * Description:
+ *   This custom property (--gradient-angle) defines the initial angle of the
+ *   conic gradient used in the .card::before and .card::after pseudo-elements.
+ * 
+ * Syntax:
+ *   "<angle>" - Accepts values like "0deg", "45deg", etc.
+ * 
+ * Initial Value:
+ *   0deg
+ * 
+ * Inherits:
+ *   false
+ */
 @property --gradient-angle{
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
 
+/**
+ * Root Styles
+ * ------------
+ * Description:
+ *   Defines custom root-level variables for color values.
+ */
 :root{
     --clr-1: #052b2f;
     --clr-2: #073438;
@@ -12,13 +34,37 @@
     --clr-5: #637c54;
 }
 
+/**
+ * Body Styles
+ * ------------
+ * Description:
+ *   Applies styling to the body element, setting the background color and
+ *   centering the content.
+ */
 body{
     background: var(--clr-2);
     min-height: 100vh;
+
+    /* Grid Container Styles */
     display: grid;
+
+    /**
+     * Center Content in Grid Container
+     * -----------------------------------
+     * Description:
+     *   Utilizes the place-content property to center the body's content both
+     *   horizontally and vertically within the grid container.
+     */
     place-content: center;
 }
 
+/**
+ * Card Styles
+ * ------------
+ * Description:
+ *   Styles for the card element, including height, aspect ratio, background color,
+ *   border radius, and the conic gradient animation.
+ */
 .card{
     height: 60vh;
     aspect-ratio: 1/1.5;
@@ -49,6 +95,12 @@ body{
     filter: blur(3.5rem);
 }
 
+/**
+ * Conic Gradient Rotation Animation
+ * -----------------------------------
+ * Description:
+ *   Defines a keyframe animation that rotates the conic gradient in the card.
+ */
 @keyframes rotation{
     0% { --gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
