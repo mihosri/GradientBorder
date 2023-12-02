@@ -27,11 +27,13 @@
  *   Defines custom root-level variables for color values.
  */
 :root{
-    --clr-1: #052b2f;
-    --clr-2: #073438;
-    --clr-3: #0e4b50;
-    --clr-4: #2d8f85;
-    --clr-5: #637c54;
+    --clr-1: #000000;
+    --clr-2: #000707;
+    --clr-3: #4fcf70;
+    --clr-4: #fad648;
+    --clr-5: #a767e5;
+    --clr-6: #12bcfe;
+    --clr-7: #44ce7b;
 }
 
 /**
@@ -66,8 +68,8 @@ body{
  *   border radius, and the conic gradient animation.
  */
 .card{
-    height: 60vh;
-    aspect-ratio: 1/1.5;
+    height: 50vh;
+    aspect-ratio: 2/1;
     background: var(--clr-1);
     border-radius: 0.5rem;
     position: relative;
@@ -84,11 +86,13 @@ body{
         var(--clr-3),
         var(--clr-4),
         var(--clr-5),
-        var(--clr-4),
+        var(--clr-6),
+        var(--clr-7),
+        var(--clr-6),
         var(--clr-3)
     );
     border-radius: inherit;
-    animation: rotation 20s linear infinite
+    animation: rotation 19s linear infinite
 }
 
 .card::after{
