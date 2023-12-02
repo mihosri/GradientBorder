@@ -109,3 +109,11 @@ body{
     0% { --gradient-angle: 0deg;}
     100% {--gradient-angle: 360deg;}
 }
+
+/* smaller screens */
+@media (max-width: 768px) {
+    .card {
+        height: 70vh; 
+        aspect-ratio: 1/1.5;
+    }
+}
